@@ -26,10 +26,10 @@
         <p><strong>Phone:</strong> {{ student.phoneNumber }}</p>
 
         <div class="mt-3 space-x-2">
-          <button (click)="editStudent(student.id!)" class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">
+          <button   (click)="editStudent(student.id!); $event.stopPropagation()"  class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">
             Update
           </button>
-          <button (click)="deleteStudent(student.id!)" class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">
+          <button (click)="deleteStudent(student.id!); $event.stopPropagation()"  class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">
             Delete
           </button>
         </div>
