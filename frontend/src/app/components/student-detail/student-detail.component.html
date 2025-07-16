@@ -1,0 +1,15 @@
+<div *ngIf="student" class="max-w-md mx-auto bg-white p-6 rounded-xl shadow-lg mt-8 text-center">
+  <img [src]="'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF02Jj8T2t7PdkytAw42HDuuSz7yXguKn8Lg&s'" class="w-24 h-24 rounded-full mx-auto mb-4">
+  <h2 class="text-2xl font-bold mb-2">{{ student.studentName }}</h2>
+  <p><strong>Father:</strong> {{ student.fatherName || 'N/A' }}</p>
+  <p><strong>Mother:</strong> {{ student.motherName || 'N/A' }}</p>
+  <p><strong>Address:</strong> {{ student.address }}</p>
+  <p><strong>Phone:</strong> {{ student.phoneNumber }}</p>
+
+  <div>
+      <a [routerLink]="['/edit', student.id]" class="inline-block mt-3 bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">Update
+      </a>
+  </div>
+
+  <a routerLink="/" class="inline-block mt-4 text-blue-600 hover:underline">← Back to List</a>
+</div>
